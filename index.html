@@ -1,0 +1,1588 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JV apresenta Como Vencer a Timidez — um caminho prático para se comunicar com mais segurança e ocupar o seu espaço.">
+  <title>JV | Como Vencer a Timidez</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #071126;
+      --ink2: #0c1933;
+      --blue: #0d55eb;
+      --blue2: #003bbb;
+      --electric: #2477ff;
+      --ice: #edf3ff;
+      --white: #fff;
+      --muted: #60708c;
+      --lime: #c9ff47;
+      --line: #dce5f4;
+      --radius: 28px;
+      --shadow: 0 24px 80px rgba(4, 31, 91, .16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      min-height: 44px;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      background: var(--blue2);
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: .03em;
+      text-align: center;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 0 0 0 rgba(201, 255, 71, .6);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      70% {
+        box-shadow: 0 0 0 8px rgba(201, 255, 71, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(201, 255, 71, 0);
+      }
+    }
+
+    .nav {
+      height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font: 800 18px "Manrope", sans-serif;
+      letter-spacing: .12em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--ink);
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: -.04em;
+      transform: rotate(-5deg);
+    }
+
+    .dot {
+      color: var(--blue);
+    }
+
+    .nav-cta {
+      padding: 8px 1px;
+      border-bottom: 2px solid var(--blue);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero {
+      min-height: 700px;
+      padding-top: 36px;
+      padding-bottom: 90px;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--blue);
+      font: 700 12px "Manrope";
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow span {
+      width: 22px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .hero h1 {
+      margin: 24px 0;
+      font: 800 clamp(48px, 5.5vw, 76px)/1.02 "Manrope", sans-serif;
+      letter-spacing: -.055em;
+    }
+
+    .hero h1 em {
+      position: relative;
+      color: var(--blue);
+      font-style: normal;
+      white-space: nowrap;
+    }
+
+    .hero h1 em::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: 1%;
+      bottom: 1px;
+      left: 1%;
+      height: 8px;
+      background: var(--lime);
+      transform: rotate(-1deg);
+    }
+
+    .lead {
+      max-width: 650px;
+      color: #50607b;
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      margin-top: 34px;
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    .button {
+      padding: 18px 22px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      border: 0;
+      border-radius: 12px;
+      font: 700 15px "DM Sans";
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .button span {
+      font-size: 20px;
+    }
+
+    .button.primary {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(13, 85, 235, .25);
+    }
+
+    .button.primary:hover {
+      background: var(--blue2);
+      box-shadow: 0 18px 38px rgba(13, 85, 235, .3);
+      transform: translateY(-2px);
+    }
+
+    .text-link {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .microproof {
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .microproof p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .microproof p strong {
+      color: var(--ink);
+    }
+
+    .mini-faces {
+      display: flex;
+    }
+
+    .mini-faces i {
+      width: 30px;
+      height: 30px;
+      margin-left: -7px;
+      display: grid;
+      place-items: center;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #a8bcf0, #416ed6);
+      color: transparent;
+    }
+
+    .mini-faces i:nth-child(2) {
+      background: linear-gradient(145deg, #ebc4a0, #9f5c38);
+    }
+
+    .mini-faces i:nth-child(3) {
+      background: linear-gradient(145deg, #d7bdea, #754da0);
+    }
+
+    .hero-visual {
+      position: relative;
+      height: 550px;
+      display: grid;
+      place-items: center;
+    }
+
+    .visual-card {
+      position: relative;
+      z-index: 2;
+      width: min(390px, 88%);
+      height: 500px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: 34px;
+      background: linear-gradient(155deg, #eaf1ff 0%, #c7d7ff 60%, #a8c0fb 100%);
+      box-shadow: var(--shadow);
+    }
+
+    .visual-card::before {
+      content: "";
+      position: absolute;
+      top: 50px;
+      left: 40px;
+      width: 310px;
+      height: 310px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: .35;
+    }
+
+    .card-label {
+      position: absolute;
+      z-index: 4;
+      top: 28px;
+      left: 28px;
+      padding: 8px 12px;
+      border: 1px solid rgba(7, 17, 38, .18);
+      border-radius: 100px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+    }
+
+    .face-illustration {
+      position: absolute;
+      right: 15px;
+      bottom: -12px;
+      left: 15px;
+    }
+
+    .face-illustration svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .confidence-tag {
+      position: absolute;
+      z-index: 5;
+      right: 20px;
+      bottom: 22px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(7, 17, 38, .14);
+      font: 700 11px "Manrope";
+    }
+
+    .confidence-tag span {
+      margin-right: 5px;
+      color: var(--blue);
+      font-size: 16px;
+    }
+
+    .orbit {
+      position: absolute;
+      z-index: 0;
+      border: 1px solid #b7c8ec;
+      border-radius: 50%;
+    }
+
+    .orbit-one {
+      width: 510px;
+      height: 510px;
+    }
+
+    .orbit-two {
+      width: 420px;
+      height: 420px;
+      border-style: dashed;
+      animation: spin 25s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .float-note {
+      position: absolute;
+      z-index: 4;
+      padding: 13px 15px;
+      border-radius: 13px;
+      background: #fff;
+      box-shadow: 0 12px 36px rgba(7, 17, 38, .14);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .float-note span {
+      width: 20px;
+      height: 20px;
+      margin-left: 8px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--lime);
+    }
+
+    .note-one {
+      top: 120px;
+      left: -5px;
+    }
+
+    .note-two {
+      right: -10px;
+      bottom: 110px;
+    }
+
+    .pain-section {
+      padding: 110px 0;
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: start;
+      gap: 100px;
+    }
+
+    .eyebrow.light {
+      color: #74a2ff;
+    }
+
+    .section-heading h2 {
+      margin: 20px 0;
+      font: 800 clamp(34px, 4vw, 54px)/1.1 "Manrope";
+      letter-spacing: -.04em;
+    }
+
+    .pain-list article {
+      padding: 24px 0;
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 22px;
+      border-top: 1px solid rgba(255, 255, 255, .16);
+    }
+
+    .pain-list article:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, .16);
+    }
+
+    .pain-list article span {
+      padding-top: 5px;
+      color: #76a2ff;
+      font: 700 12px "Manrope";
+    }
+
+    .pain-list p {
+      margin: 0;
+      color: #dde6f8;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .method {
+      padding: 120px 0;
+    }
+
+    .section-heading.centered {
+      max-width: 800px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .section-heading.centered .eyebrow {
+      justify-content: center;
+    }
+
+    .section-heading > p:last-child {
+      max-width: 670px;
+      margin-inline: auto;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .steps {
+      margin-top: 58px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      padding: 36px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #fff;
+      transition: .25s;
+    }
+
+    .step:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow);
+      transform: translateY(-5px);
+    }
+
+    .step-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--ice);
+      color: var(--blue);
+      font: 800 14px "Manrope";
+    }
+
+    .step h3 {
+      margin: 28px 0 12px;
+      font: 700 21px "Manrope";
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .results {
+      padding: 110px 0;
+      overflow: hidden;
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 100px;
+    }
+
+    .results-art {
+      position: relative;
+      min-height: 390px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      background: var(--blue2);
+    }
+
+    .results-art::after {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 50%;
+    }
+
+    .big-word {
+      z-index: 2;
+      color: transparent;
+      font: 800 clamp(80px, 11vw, 150px)/1 "Manrope";
+      letter-spacing: -.08em;
+      -webkit-text-stroke: 2px rgba(255, 255, 255, .4);
+    }
+
+    .results-art p {
+      z-index: 2;
+      font-weight: 700;
+    }
+
+    .sound-wave {
+      z-index: 2;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sound-wave i {
+      width: 5px;
+      height: 18px;
+      display: block;
+      border-radius: 5px;
+      background: var(--lime);
+    }
+
+    .sound-wave i:nth-child(2),
+    .sound-wave i:nth-child(6) {
+      height: 34px;
+    }
+
+    .sound-wave i:nth-child(3),
+    .sound-wave i:nth-child(5) {
+      height: 50px;
+    }
+
+    .sound-wave i:nth-child(4) {
+      height: 60px;
+    }
+
+    .results-copy h2 {
+      margin: 20px 0 36px;
+      font: 800 clamp(40px, 5vw, 60px)/1.05 "Manrope";
+      letter-spacing: -.05em;
+    }
+
+    .results-copy ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .results-copy li {
+      padding: 17px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border-top: 1px solid rgba(255, 255, 255, .2);
+      font-size: 16px;
+    }
+
+    .results-copy li:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .results-copy li span {
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--lime);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .audience {
+      padding: 120px 0;
+    }
+
+    .audience-grid {
+      margin-top: 55px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .audience-grid article {
+      min-height: 190px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 22px;
+      background: var(--ice);
+    }
+
+    .audience-grid article span {
+      color: var(--blue);
+      font-size: 24px;
+    }
+
+    .audience-grid p {
+      margin: 30px 0 0;
+      font: 600 18px/1.5 "Manrope";
+    }
+
+    .offer {
+      padding: 40px 0 120px;
+    }
+
+    .offer-card {
+      position: relative;
+      padding: 65px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 390px;
+      align-items: center;
+      gap: 80px;
+      border-radius: 32px;
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .offer-card::before {
+      content: "";
+      position: absolute;
+      top: -290px;
+      right: -290px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: var(--blue);
+      filter: blur(1px);
+      opacity: .45;
+    }
+
+    .offer-pill {
+      color: var(--lime);
+      font: 700 11px "Manrope";
+      letter-spacing: .15em;
+    }
+
+    .offer-copy h2 {
+      margin: 20px 0;
+      font: 800 clamp(38px, 4.2vw, 58px)/1.08 "Manrope";
+      letter-spacing: -.05em;
+    }
+
+    .offer-copy p {
+      max-width: 600px;
+      color: #b9c7df;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .checkout-box {
+      position: relative;
+      z-index: 2;
+      padding: 30px;
+      border-radius: 22px;
+      background: #fff;
+      color: var(--ink);
+      box-shadow: 0 20px 55px rgba(0, 0, 0, .22);
+    }
+
+    .checkout-box > p {
+      color: var(--blue);
+      font: 700 11px "Manrope";
+      letter-spacing: .12em;
+    }
+
+    .price {
+      margin: 18px 0;
+      padding: 20px 0;
+      border-block: 1px solid var(--line);
+    }
+
+    .price small,
+    .price-mobile small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .price strong,
+    .price-mobile strong {
+      margin-top: 7px;
+      display: block;
+      font: 800 56px/1 "Manrope";
+      letter-spacing: -.06em;
+    }
+
+    .price sup,
+    .price-mobile sup {
+      position: relative;
+      top: 8px;
+      vertical-align: top;
+      font-size: 18px;
+    }
+
+    .price strong span,
+    .price-mobile strong span {
+      font-size: 28px;
+    }
+
+    .checkout-box ul {
+      margin: 22px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .checkout-box li {
+      margin: 12px 0;
+      font-size: 14px;
+    }
+
+    .checkout-box li span {
+      margin-right: 8px;
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .checkout-button {
+      width: 100%;
+    }
+
+    .secure {
+      margin-top: 14px;
+      display: block;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .price-mobile {
+      display: none;
+    }
+
+    .faq {
+      padding: 110px 0;
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 90px;
+    }
+
+    .accordion details {
+      border-top: 1px solid var(--line);
+    }
+
+    .accordion details:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .accordion summary {
+      padding: 23px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      list-style: none;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .accordion summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .accordion summary span {
+      color: var(--blue);
+      font-size: 20px;
+      transition: .2s;
+    }
+
+    .accordion details[open] summary span {
+      transform: rotate(45deg);
+    }
+
+    .accordion details p {
+      margin: -5px 40px 24px 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 32px 0;
+      background: #f5f8fe;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-inner .brand {
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .footer-inner .brand-mark {
+      width: 29px;
+      height: 29px;
+      font-size: 13px;
+    }
+
+    .footer-inner div:last-child {
+      display: flex;
+      gap: 20px;
+    }
+
+    .mobile-cta {
+      display: none;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .75s ease, transform .75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .delay-short {
+      transition-delay: .1s;
+    }
+
+    .delay {
+      transition-delay: .2s;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        padding-top: 35px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-copy .eyebrow {
+        justify-content: center;
+      }
+
+      .lead {
+        margin-inline: auto;
+      }
+
+      .hero-actions,
+      .microproof {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        height: 490px;
+      }
+
+      .note-one {
+        left: 2%;
+      }
+
+      .note-two {
+        right: 2%;
+      }
+
+      .pain-grid,
+      .results-grid,
+      .faq {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .steps,
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-card {
+        padding: 45px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .offer-copy {
+        text-align: center;
+      }
+
+      .offer-copy p {
+        margin-inline: auto;
+      }
+
+      .checkout-box {
+        width: 100%;
+        max-width: 430px;
+        margin-inline: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .wrap {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .topbar {
+        font-size: 11px;
+      }
+
+      .nav {
+        height: 68px;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 42px 0 65px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .lead {
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        gap: 17px;
+      }
+
+      .button {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      .hero-visual {
+        height: 420px;
+      }
+
+      .visual-card {
+        width: 82%;
+        height: 390px;
+      }
+
+      .float-note {
+        padding: 10px;
+        font-size: 10px;
+      }
+
+      .note-one {
+        top: 105px;
+      }
+
+      .note-two {
+        bottom: 80px;
+      }
+
+      .orbit-one {
+        width: 390px;
+        height: 390px;
+      }
+
+      .orbit-two {
+        width: 330px;
+        height: 330px;
+      }
+
+      .pain-section,
+      .results {
+        padding: 75px 0;
+      }
+
+      .method,
+      .audience,
+      .faq {
+        padding: 80px 0;
+      }
+
+      .section-heading h2 {
+        font-size: 36px;
+      }
+
+      .pain-grid {
+        gap: 35px;
+      }
+
+      .pain-list p {
+        font-size: 16px;
+      }
+
+      .step {
+        padding: 28px;
+      }
+
+      .results-art {
+        min-height: 300px;
+      }
+
+      .big-word {
+        font-size: 90px;
+      }
+
+      .audience-grid p {
+        font-size: 16px;
+      }
+
+      .offer {
+        padding: 20px 0 90px;
+      }
+
+      .offer-card {
+        padding: 35px 22px;
+        border-radius: 24px;
+      }
+
+      .offer-copy h2 {
+        font-size: 36px;
+      }
+
+      .checkout-box {
+        padding: 25px;
+      }
+
+      .price {
+        display: none;
+      }
+
+      .price-mobile {
+        margin-top: 25px;
+        display: block;
+        color: #fff;
+      }
+
+      .price-mobile small {
+        color: #9fafc9;
+      }
+
+      .faq {
+        gap: 30px;
+      }
+
+      .footer-inner {
+        padding-bottom: 60px;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .mobile-cta {
+        position: fixed;
+        z-index: 15;
+        right: 14px;
+        bottom: 12px;
+        left: 14px;
+        min-height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        border-radius: 12px;
+        background: var(--blue);
+        color: #fff;
+        box-shadow: 0 12px 35px rgba(13, 85, 235, .38);
+        font-weight: 700;
+      }
+
+      .microproof {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .orbit-two {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <span class="pulse"></span>
+    <strong>Oferta de lançamento</strong>
+    <span>•</span>
+    <span>acesso por apenas R$ 17,90</span>
+  </div>
+
+  <header class="nav wrap">
+    <a class="brand" href="#inicio" aria-label="Início">
+      <span class="brand-mark">JV</span>
+      <span>JV<span class="dot">.</span></span>
+    </a>
+
+    <a class="nav-cta" href="#oferta">Quero começar</a>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="inicio">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">
+          <span></span>
+          Coragem se constrói
+        </p>
+
+        <h1>
+          Você não precisa ser <em>extrovertido</em> para vencer a timidez.
+        </h1>
+
+        <p class="lead">
+          Aprenda a diminuir o medo do julgamento, se expressar com mais
+          clareza e participar de conversas sem deixar a ansiedade decidir
+          por você.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#oferta">
+            Quero destravar minha comunicação
+            <span>→</span>
+          </a>
+
+          <a class="text-link" href="#metodo">
+            Conhecer o caminho
+            <span>↓</span>
+          </a>
+        </div>
+
+        <div class="microproof">
+          <div class="mini-faces" aria-hidden="true">
+            <i>●</i>
+            <i>●</i>
+            <i>●</i>
+          </div>
+
+          <p>
+            <strong>Um passo por vez.</strong><br>
+            Sem precisar mudar quem você é.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal delay">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="visual-card">
+          <span class="card-label">CURSO DIGITAL</span>
+
+          <div class="face-illustration" aria-hidden="true">
+            <svg viewBox="0 0 360 390" role="img" aria-label="Ilustração representando confiança">
+              <defs>
+                <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#dfe8ff"/>
+                  <stop offset="1" stop-color="#6c89d9"/>
+                </linearGradient>
+
+                <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#1464ff"/>
+                  <stop offset="1" stop-color="#063ab9"/>
+                </linearGradient>
+              </defs>
+
+              <circle cx="180" cy="138" r="88" fill="url(#skin)"/>
+
+              <path
+                d="M93 118c4-72 48-103 92-103 53 0 89 37 89 102-25-26-51-42-83-47-26 22-57 38-98 48Z"
+                fill="#071126"
+              />
+
+              <path
+                d="M117 146c12 7 24 7 36 0M207 146c12 7 24 7 36 0"
+                stroke="#071126"
+                stroke-width="7"
+                stroke-linecap="round"
+                fill="none"
+              />
+
+              <path
+                d="M155 187c16 14 35 14 51 0"
+                stroke="#0c2354"
+                stroke-width="7"
+                stroke-linecap="round"
+                fill="none"
+              />
+
+              <path
+                d="M54 390c7-103 54-148 126-148s119 45 126 148"
+                fill="url(#shirt)"
+              />
+
+              <path d="M137 245l43 53 43-53" fill="#eaf0ff"/>
+
+              <path
+                d="M119 275l61 73 61-73"
+                stroke="#0b4edf"
+                stroke-width="3"
+                fill="none"
+                opacity=".7"
+              />
+            </svg>
+          </div>
+
+          <div class="confidence-tag">
+            <span>↗</span>
+            CONFIANÇA É TREINO
+          </div>
+        </div>
+
+        <div class="float-note note-one">
+          Fale com clareza
+          <span>✓</span>
+        </div>
+
+        <div class="float-note note-two">
+          Menos autocobrança
+          <span>✓</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pain-section">
+      <div class="wrap pain-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow light">
+            <span></span>
+            Isso acontece com você?
+          </p>
+
+          <h2>
+            A timidez fala baixo,<br>
+            mas decide muita coisa.
+          </h2>
+        </div>
+
+        <div class="pain-list reveal delay">
+          <article>
+            <span>01</span>
+            <p>Você sabe o que quer dizer, mas trava exatamente na hora de falar.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <p>Evita iniciar conversas ou fazer perguntas com medo de parecer inadequado.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <p>Perde oportunidades e depois pensa: “eu deveria ter tentado”.</p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <p>Se cobra para ser mais solto, mas não sabe por onde começar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="method wrap" id="metodo">
+      <div class="section-heading centered reveal">
+        <p class="eyebrow">
+          <span></span>
+          Um caminho possível
+        </p>
+
+        <h2>
+          Não é sobre virar outra pessoa.<br>
+          É sobre recuperar a sua voz.
+        </h2>
+
+        <p>
+          Uma jornada prática para entender o bloqueio, desenvolver segurança
+          e agir mesmo quando a timidez aparecer.
+        </p>
+      </div>
+
+      <div class="steps">
+        <article class="step reveal">
+          <div class="step-icon">01</div>
+          <h3>Entenda o bloqueio</h3>
+          <p>Reconheça os pensamentos e situações que alimentam o medo de se expor.</p>
+        </article>
+
+        <article class="step reveal delay-short">
+          <div class="step-icon">02</div>
+          <h3>Construa segurança</h3>
+          <p>Desenvolva uma postura mais gentil e firme diante da autocobrança.</p>
+        </article>
+
+        <article class="step reveal delay">
+          <div class="step-icon">03</div>
+          <h3>Pratique no cotidiano</h3>
+          <p>Transforme pequenas situações reais em treino para se comunicar melhor.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="wrap results-grid">
+        <div class="results-art reveal" aria-hidden="true">
+          <div class="big-word">VOZ</div>
+
+          <div class="sound-wave">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+
+          <p>Você merece ser ouvido.</p>
+        </div>
+
+        <div class="results-copy reveal delay">
+          <p class="eyebrow light">
+            <span></span>
+            Para levar para a vida
+          </p>
+
+          <h2>
+            Mais presença.<br>
+            Menos paralisia.
+          </h2>
+
+          <ul>
+            <li><span>✓</span> Iniciar conversas com mais naturalidade</li>
+            <li><span>✓</span> Expressar opiniões sem pedir desculpas por existir</li>
+            <li><span>✓</span> Lidar melhor com o medo de ser julgado</li>
+            <li><span>✓</span> Parar de confundir timidez com incapacidade</li>
+            <li><span>✓</span> Criar pequenas ações para ampliar sua confiança</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience wrap">
+      <div class="section-heading centered reveal">
+        <p class="eyebrow">
+          <span></span>
+          Feito para pessoas reais
+        </p>
+
+        <h2>Este curso pode ser o seu primeiro passo se…</h2>
+      </div>
+
+      <div class="audience-grid">
+        <article class="reveal">
+          <span>✦</span>
+          <p>Você fica em silêncio mesmo quando tem algo importante para dizer.</p>
+        </article>
+
+        <article class="reveal delay-short">
+          <span>✦</span>
+          <p>Entrevistas, reuniões, encontros ou apresentações geram muita tensão.</p>
+        </article>
+
+        <article class="reveal delay">
+          <span>✦</span>
+          <p>Você quer melhorar sua comunicação sem fingir ser alguém que não é.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="offer" id="oferta">
+      <div class="wrap offer-card reveal">
+        <div class="offer-copy">
+          <span class="offer-pill">COMECE HOJE</span>
+
+          <h2>Sua timidez não precisa comandar o próximo capítulo.</h2>
+
+          <p>
+            Dê o primeiro passo para falar com mais segurança, criar conexões
+            e aproveitar oportunidades que antes pareciam distantes.
+          </p>
+
+          <div class="price-mobile">
+            <small>Investimento único</small>
+            <strong><sup>R$</sup> 17<span>,90</span></strong>
+          </div>
+        </div>
+
+        <div class="checkout-box">
+          <p>ACESSO AO CURSO DIGITAL</p>
+
+          <div class="price">
+            <small>Investimento único</small>
+            <strong><sup>R$</sup> 17<span>,90</span></strong>
+          </div>
+
+          <ul>
+            <li><span>✓</span> Conteúdo direto e acessível</li>
+            <li><span>✓</span> Aprenda no seu ritmo</li>
+            <li><span>✓</span> Acesso digital</li>
+          </ul>
+
+          <a
+            class="button primary checkout-button"
+            href="https://pay.hotmart.com/X107919832X?checkoutMode=10&amp;bid=1791334028946"
+            target="_blank"
+            rel="noopener sponsored"
+          >
+            Quero vencer a timidez
+            <span>→</span>
+          </a>
+
+          <small class="secure">▣ Ambiente de compra segura</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq wrap">
+      <div class="section-heading reveal">
+        <p class="eyebrow">
+          <span></span>
+          Dúvidas frequentes
+        </p>
+
+        <h2>Antes de começar</h2>
+      </div>
+
+      <div class="accordion reveal delay">
+        <details>
+          <summary>
+            Preciso ser extrovertido para aproveitar o curso?
+            <span>+</span>
+          </summary>
+
+          <p>
+            Não. A proposta é desenvolver segurança e comunicação respeitando
+            sua personalidade, sem exigir que você se transforme em outra pessoa.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            O curso é indicado para quem trava ao conversar?
+            <span>+</span>
+          </summary>
+
+          <p>
+            Sim. O conteúdo foi pensado para quem sente medo do julgamento,
+            evita se expor ou quer participar de conversas com mais tranquilidade.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Como vou receber o acesso?
+            <span>+</span>
+          </summary>
+
+          <p>
+            As instruções de acesso serão enviadas após a confirmação da compra
+            pelo canal informado no checkout.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            Posso acompanhar no meu ritmo?
+            <span>+</span>
+          </summary>
+
+          <p>
+            Sim. Por ser um conteúdo digital, você pode organizar seus estudos
+            de acordo com a sua rotina.
+          </p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="brand">
+        <span class="brand-mark">JV</span>
+        <span>JV<span class="dot">.</span></span>
+      </div>
+
+      <p>JV — Como Vencer a Timidez © <span id="year"></span></p>
+
+      <div>
+        <a href="#">Termos</a>
+        <a href="#">Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <a
+    class="mobile-cta"
+    href="https://pay.hotmart.com/X107919832X?checkoutMode=10&amp;bid=1791334028946"
+    target="_blank"
+    rel="noopener sponsored"
+  >
+    Começar por R$ 17,90
+    <span>→</span>
+  </a>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12
+    });
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach((element) => observer.observe(element));
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
